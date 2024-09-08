@@ -1,0 +1,75 @@
+import java.util.*;
+class Gfather
+{
+	String gfname;
+	int p1;
+	void getGfather(String gfname,int p1)
+	{
+		this.gfname=gfname;
+		this.p1=p1;
+	}
+	void showGfather()
+	{
+		System.out.println("gfather name="+gfname);
+		System.out.println("gfather property="+p1);
+	}
+}
+class Father extends Gfather
+{
+	String fname;
+	int p2;
+	void getFather(String fname,int p2)
+	{
+		this.fname=fname;
+		this.p2=p2;
+	}
+	void showFather()
+	{
+		System.out.println("father name="+fname);
+		System.out.println("father property="+p2);
+		System.out.println("father total property="+(p1+p2));
+	}
+}
+class Daughter extends Father
+{
+	String dname;
+	int p3;
+	void getDaughter(String dname,int p3)
+	{
+		this.dname=dname;
+		this.p3=p3;
+	}
+	void showDaughter()
+	{
+		System.out.println("daughter name="+dname);
+		System.out.println("daughter property="+p3);
+		System.out.println("daughter total property="+(p1+p2+p3));
+	}
+}
+class Multilevel
+{
+	public static void main(String[] args)
+	{
+		Father f1=new Father();
+		f1.getGfather("rrr",40000);
+		f1.showGfather();
+		f1.getFather("sss",5000);
+		f1.showFather();
+		Daughter d1=new Daughter();
+		d1.getDaughter("aaa",3000);
+		d1.showDaughter();
+	}
+}	
+
+
+
+
+output:
+gfather name=rrr
+gfather property=40000
+father name=sss
+father property=5000
+father total property=45000
+daughter name=aaa
+daughter property=3000
+daughter total property=3000
