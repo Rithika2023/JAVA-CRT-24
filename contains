@@ -1,0 +1,22 @@
+//string contains
+import java.util.*;
+class Contains
+{
+	public static void main(String[] args)
+	{
+		Scanner s=new Scanner(System.in);
+		String str1=s.nextLine();
+		String str2=s.nextLine();
+		if(str1.contains(str2))
+			System.out.println("sub string found");
+		else
+			System.out.println("sub string not found");
+	}
+}
+
+
+
+output:
+vignancollege
+college
+sub string found
